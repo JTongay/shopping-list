@@ -1,0 +1,40 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+/* Header and nav bar */
+
+.masthead {
+  background-image: url('../images/tomato.jpeg');
+  background-size: cover;
+  padding: 4.5em;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 4em;
+}
+
+#inputBox {
+  text-align: center;
+  font-family: 'Indie Flower', sans-serif;
+  color: white;
+  font-size: 1.5em;
+}
+
+#add {
+  cursor: pointer;
+  background-color: transparent;
+  font-family: 'Indie Flower', sans-serif;
+  color: white;
+}
+
+
+/*Lists*/
