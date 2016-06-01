@@ -93,3 +93,20 @@
   font-size: 1.3em;
   color: #1ADB37
 }
+
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 2em;
+  }
+  .masthead {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    float: none;
+  }
+  ul {
+    float: left;
+    margin: auto;
+    position: relative;
+  }
+}
