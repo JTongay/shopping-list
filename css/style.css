@@ -106,7 +106,9 @@
   }
   ul {
     float: left;
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
     position: relative;
   }
 }
