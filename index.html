@@ -14,33 +14,26 @@
     <p class="masthead-intro">
       <h1 class="title">Get Some Groceries</h1></p>
     <!-- textbox for adding shopping items -->
-    <form id="inputBox" size="40">
+    <form id="input-box" size="40">
       <input type="text" id="textbox" name="AddItem">
       <button type="submit" id="add">I Need</button>
     </form>
   </nav>
   <section class="i-need">
-    <ul id="ulList">
+    <ul id="need_list">
       <h2><u>I Need</u></h2></ul>
     <li class="items">
-      <div class="box"></div>
-      <span>Bread</span>
+      <input type="checkbox" class="done"> Bread
+      <button type="button" class="delete">x</button>
     </li>
     <li class="items">
-      <div class="box"></div>
-      <span>Milk</span>
+      <input type="checkbox" class="done"> Milk
+      <button type="button" class="delete">x</button>
     </li>
     <li class="items">
-      <div class="box"></div>
-      <span>Eggs</span>
+      <input type="checkbox" class="done"> Eggs
+      <button type="button" class="delete">x</button>
     </li>
-  </section>
-  <section class="i-have">
-    <ul>
-      <h2><u>I Have</u>
-</h2>
-      <div class="checkbox"></div>
-    </ul>
   </section>
   <script src="//code.jquery.com/jquery.min.js"></script>
   <script src="js/main.js"></script>
