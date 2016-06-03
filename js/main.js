@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // add item on button click //
-  $(document).on('submit', '#add', addListItem);
+  $(document).on('click', '#add', addListItem);
   event.preventDefault();
 
 
