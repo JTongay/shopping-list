@@ -48,16 +48,18 @@
 .i-need {
   margin: 0 auto;
   width: 200px;
+  font-family: 'Indie Flower', sans-serif;
 }
 
 .items {
   list-style: none;
+  font-family: 'Indie Flower', sans-serif;
 }
 
 .i-need .items {
   text-align: left;
   padding-top: 8px;
-  font-size: 1.3em;
+  font-size: 1.4em;
   color: #1ADB37
 }
 

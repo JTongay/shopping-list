@@ -50,6 +50,6 @@ function finishItem() {
   if ($(this).parent().css('textDecoration') == 'line-through') {
     $(this).parent().css('textDecoration', 'none').css('color', '#1ADB37');
   } else {
-    $(this).parent().css('textDecoration', 'line-through').css('color', 'red');
+    $(this).parent().css('textDecoration', 'line-through').css('color', '#EE816E');
   }
 }
