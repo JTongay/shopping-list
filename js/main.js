@@ -13,6 +13,10 @@ $(document).ready(function () {
 //adds text from textbox
 function addListItem() {
   var text = $('#textbox').val();
+  if (text.trim().length === 0) {
+    alert('You must enter an item.');
+    return;
+  }
   $('.i-need').append('<ul class="need_list"><li class="items"><input type="checkbox" class="done"/>' + text + '<button class="delete">x</button></li></ul>');
   //sets textbox to empty once item is entered
   $('#textbox').val('');
