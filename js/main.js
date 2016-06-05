@@ -10,18 +10,16 @@ $(document).ready(function () {
     This almost worked. The page just reloaded right after it showed without the new text added.
   })
   */
-  /*
-  $('#textbox').keydown(function (e) {
-    if (e.which === 13) {
-      addListItem();
-    }
-  })
-  same thing happened here
-  */
   event.preventDefault();
-
-  //$('.delete').on('click', deleteListItem);
-  //$('.done').on('click', finishItem);
+  //uses enter key to work as well
+  $('#textbox').keydown(function (e) {
+      if (e.which === 13) {
+        addListItem();
+        event.preventDefault();
+      }
+    })
+    //$('.delete').on('click', deleteListItem);
+    //$('.done').on('click', finishItem);
   $(document).on('click', '.done', finishItem);
   $(document).on('click', '.delete', deleteListItem);
 
