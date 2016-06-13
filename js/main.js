@@ -1,10 +1,10 @@
 $(function () {
   // add item on button click //
   $(document)
-    .on('click', '#add', addListItem);
-  .on('keydown', '#textbox', addWithEnterKey);
-  .on('click', '.done', finishItem);
-  .on('click', '.delete', deleteListItem);
+    .on('click', '#add', addListItem)
+    .on('keydown', '#textbox', addWithEnterKey)
+    .on('click', '.done', finishItem)
+    .on('click', '.delete', deleteListItem);
   /*
   $('#textbox').keydown(function (event) {
     var keycode = event.keyCode ? event.keyCode : event.which;
@@ -39,15 +39,11 @@ function addListItem() {
 
 }
 
-function addWithEnterKey() {
-  event.preventDefault();
+function addWithEnterKey(event) {
   //uses enter key to work as well
-  $('#textbox').keydown(function (e) {
-    if (e.which === 13) {
-      addListItem();
-      event.preventDefault();
-    }
-  })
+  if (event.keyCode === 13) {
+    addListItem(event);
+  }
 }
 //delete button works
 function deleteListItem() {
