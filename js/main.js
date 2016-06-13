@@ -1,30 +1,24 @@
-(function () {
-  $(function () {
-    // add item on button click //
-    $(document)
-      .on('click', '#add', addListItem)
-      .on('keydown', '#textbox', addWithEnterKey)
-      .on('click', '.done', finishItem)
-      .on('click', '.delete', deleteListItem);
-    /*
-    $('#textbox').keydown(function (event) {
-      var keycode = event.keyCode ? event.keyCode : event.which;
-      if (keycode === 13) {
-        addListItem();
-      }
-      This almost worked. The page just reloaded right after it showed without the new text added.
-    })
-    */
+$(function () {
+  // add item on button click //
+  $(document)
+    .on('click', '#add', addListItem)
+    .on('keydown', '#textbox', addWithEnterKey)
+    .on('click', '.done', finishItem)
+    .on('click', '.delete', deleteListItem);
+  /*
+  $('#textbox').keydown(function (event) {
+    var keycode = event.keyCode ? event.keyCode : event.which;
+    if (keycode === 13) {
+      addListItem();
+    }
+    This almost worked. The page just reloaded right after it showed without the new text added.
+  })
+  */
 
 
-    //$('.delete').on('click', deleteListItem);
-    //$('.done').on('click', finishItem);
+  //$('.delete').on('click', deleteListItem);
+  //$('.done').on('click', finishItem);
 
-
-
-
-
-  });
   //adds text from textbox
   function addListItem() {
     event.preventDefault();
@@ -36,8 +30,6 @@
     $('.i-need').append('<ul class="need_list"><li class="items"><input type="checkbox" class="done"/><span>  ' + text + '</span><button class="delete">x</button></li></ul>');
     //sets textbox to empty once item is entered
     $('#textbox').val('');
-
-
   }
 
   function addWithEnterKey(event) {
