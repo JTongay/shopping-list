@@ -1,6 +1,10 @@
-$(document).ready(function () {
+$(function () {
   // add item on button click //
-  $(document).on('click', '#add', addListItem);
+  $(document)
+    .on('click', '#add', addListItem);
+  .on('keydown', '#textbox', addWithEnterKey);
+  .on('click', '.done', finishItem);
+  .on('click', '.delete', deleteListItem);
   /*
   $('#textbox').keydown(function (event) {
     var keycode = event.keyCode ? event.keyCode : event.which;
@@ -10,18 +14,11 @@ $(document).ready(function () {
     This almost worked. The page just reloaded right after it showed without the new text added.
   })
   */
-  event.preventDefault();
-  //uses enter key to work as well
-  $('#textbox').keydown(function (e) {
-      if (e.which === 13) {
-        addListItem();
-        event.preventDefault();
-      }
-    })
-    //$('.delete').on('click', deleteListItem);
-    //$('.done').on('click', finishItem);
-  $(document).on('click', '.done', finishItem);
-  $(document).on('click', '.delete', deleteListItem);
+
+
+  //$('.delete').on('click', deleteListItem);
+  //$('.done').on('click', finishItem);
+
 
 
 
@@ -29,6 +26,7 @@ $(document).ready(function () {
 });
 //adds text from textbox
 function addListItem() {
+  event.preventDefault();
   var text = $('#textbox').val();
   if (text.trim().length === 0) {
     alert('You must enter an item.');
@@ -38,6 +36,18 @@ function addListItem() {
   //sets textbox to empty once item is entered
   $('#textbox').val('');
 
+
+}
+
+function addWithEnterKey() {
+  event.preventDefault();
+  //uses enter key to work as well
+  $('#textbox').keydown(function (e) {
+    if (e.which === 13) {
+      addListItem();
+      event.preventDefault();
+    }
+  })
 }
 //delete button works
 function deleteListItem() {
@@ -45,6 +55,7 @@ function deleteListItem() {
 }
 //puts text decorations on checkbox
 function finishItem() {
+  event.preventDefault();
   if ($(this).parent().css('textDecoration') == 'line-through') {
     $(this).parent().css('textDecoration', 'none').css('color', '#1ADB37');
   } else {
