@@ -12,7 +12,7 @@
 .masthead {
   background-image: url('../images/tomato.jpeg');
   background-size: cover;
-  padding: 4.5em;
+  padding: 3.5em;
 }
 
 .title {
@@ -22,77 +22,65 @@
   font-size: 4em;
 }
 
-#inputBox {
+#input-box {
+  display: block;
   text-align: center;
   font-family: 'Indie Flower', sans-serif;
   color: white;
   font-size: 1.5em;
   border-radius: 3px;
+  margin: 0 auto;
 }
 
+#input-box,
 #add {
+  text-align: center;
   cursor: pointer;
   background-color: transparent;
   font-family: 'Indie Flower', sans-serif;
   color: white;
+  padding-right: 8px;
 }
 
 
 /*Lists start*/
 
-.i-have {
-  float: right;
-  padding-top: 1em;
-  padding-right: 20em;
-  list-style: none;
-  font-family: 'Indie Flower', sans-serif;
-}
-
 .i-need {
-  float: left;
-  padding-left: 13em;
-  padding-top: 1em;
-  list-style: none;
+  margin: 0 auto;
+  width: 200px;
   font-family: 'Indie Flower', sans-serif;
 }
 
-.i-have .items {
-  padding-top: 8px;
-  font-size: 1.3em;
-  color: #F51444;
-}
-
-
-/* unchecked box */
-
-.box {
-  float: left;
-  height: 15px;
-  width: 15px;
-  padding-top: 5px;
-  padding-right: 20px;
-  background: url('../images/unchecked_checkbox.png') no-repeat;
-  background-size: contain;
-}
-
-
-/* checked box */
-
-.checkbox {
-  background: url('../images/checked_checkbox.png') no-repeat;
-  background-size: contain;
-  float: left;
-  height: 15px;
-  width: 15px;
-  padding-top: 5px;
-  padding-right: 20px;
+.items {
+  list-style: none;
+  font-family: 'Indie Flower', sans-serif;
 }
 
 .i-need .items {
+  text-align: left;
   padding-top: 8px;
-  font-size: 1.3em;
+  font-size: 1.4em;
   color: #1ADB37
 }
+
+.done {
+  color: green;
+  padding-right: 3px;
+  cursor: pointer;
+}
+
+.delete {
+  color: red;
+  background-color: transparent;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+
+/*#delete {
+  float: right;
+}
+*/
 
 @media only screen and (max-width: 600px) {
   .title {
@@ -105,7 +93,6 @@
     float: none;
   }
   ul {
-    float: left;
     margin: 0;
     padding: 0;
     border: 0;

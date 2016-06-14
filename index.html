@@ -14,36 +14,27 @@
     <p class="masthead-intro">
       <h1 class="title">Get Some Groceries</h1></p>
     <!-- textbox for adding shopping items -->
-    <form id="inputBox" size="40">
-      <input type="text" name="AddItem">
-      <button type="submit" id="add">I Need</button>
+    <form id="input-box" size="40">
+      <input type="text" id="textbox" placeholder="What do you need?">
+      <button type="button" id="add">I Need</button>
     </form>
   </nav>
-  <div class="container">
-    <section class="i-need">
-      <ul>
-        <h2><u>I Need</u></h2></ul>
-      <li class="items">
-        <div class="box"></div>
-        <span>Bread</span>
-      </li>
-      <li class="items">
-        <div class="box"></div>
-        <span>Milk</span>
-      </li>
-      <li class="items">
-        <div class="box"></div>
-        <span>Eggs</span>
-      </li>
-    </section>
-    <section class="i-have">
-      <ul>
-        <h2><u>I Have</u>
-</h2>
-        <div class="checkbox"></div>
-      </ul>
-    </section>
-  </div>
+  <section class="i-need">
+    <ul id="need_list">
+      <h2><u>I Need</u></h2></ul>
+    <li class="items">
+      <input type="checkbox" class="done"> Bread
+      <button type="button" class="delete">x</button>
+    </li>
+    <li class="items">
+      <input type="checkbox" class="done"> Milk
+      <button type="button" class="delete">x</button>
+    </li>
+    <li class="items">
+      <input type="checkbox" class="done"> Eggs
+      <button type="button" class="delete">x</button>
+    </li>
+  </section>
   <script src="//code.jquery.com/jquery.min.js"></script>
   <script src="js/main.js"></script>
 </body>
